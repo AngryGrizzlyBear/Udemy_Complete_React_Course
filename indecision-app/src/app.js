@@ -1,33 +1,11 @@
 console.log("App.js is running!");
 
-// JSX - Javascript XML
-
-// Going to use
-// if statements
-// ternary operators
-// logical and operator
-
-// create app object title/subtitle
-// user title/subtitle in the template
-// render template
-
-
-// only render the subtitle (and p tag) if subtitle exist - logical and operator
-// render new p tag - if options.length > 0 "Here are your options" "No options."
 
 const app = {
     title: 'Indecision App',
     subtitle: 'Put your life in the hands of a computer.',
     options: ['One', 'Two'],
 };
-
-// This works too.
-// function getSubtitle(subtitle) {
-//     if (subtitle) {
-//         return <p>{subtitle}</p>;
-//     }
-// }
-// getSubtitle(app.subtitle)
 
 const template = (
     <div>
@@ -41,33 +19,42 @@ const template = (
     </div>
 );
 
+let count = 0;
 
-// Create a templateTwo var JSX Expression.
-// div
-// h1 -> Your name
-// p -> Age:
-// p -> Location
-// RenderTwo instead of Template
-
-const user = {
-    name: 'Andrew',
-    age: 19,
-    location: 'Philadelphia',
+const addOne = () => {
+    count++;
+    renderCounterApp();
+};
+const minusOne = () => {
+    // subtract -1 from count - rerender
+    count--;
+    renderCounterApp();
 };
 
-function getLocation(location) {
-    if (location) {
-        return <p>Location: {location}</p>;
-    }
-}
+const reset = () => {
+    // set count to 0 a rerender
+    count = 0;
+    renderCounterApp();
+};
 
-const templateTwo = (
-  <div>
-      <h1>{user.name ? user.name : 'Anonymous'}</h1>
-      {(user.age >= 18) && <p>Age: {user.age}</p>}
-      {getLocation(user.location)}
-  </div>
-);
+
+
+// Challenge
+// Make a button "-1" - setup minusOne and register - log "minusOne"
+// Make reset button "reset" - setup reset function - log "reset"
+
 const appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+const renderCounterApp = () => {
+    const templateTwo = (
+        <div>
+            <h1>Count: {count}</h1>
+            <button onClick={addOne}>+1</button>
+            <button onClick={minusOne}>-1</button>
+            <button onClick={reset}>reset</button>
+        </div>
+    );
+    ReactDOM.render(templateTwo, appRoot);
+};
+
+renderCounterApp();

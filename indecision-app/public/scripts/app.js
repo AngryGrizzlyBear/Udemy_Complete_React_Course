@@ -1,48 +1,98 @@
 'use strict';
 
-// arguments object - no longer bound with arrow functions.
+console.log("App.js is running!");
 
-var add = function add(a, b) {
-
-    // console.log(arguments)
-    return a + b;
+var app = {
+    title: 'Indecision App',
+    subtitle: 'Put your life in the hands of a computer.',
+    options: ['One', 'Two']
 };
 
-console.log(add(55, 1, 1001));
+var template = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        null,
+        app.title
+    ),
+    app.subtitle && React.createElement(
+        'p',
+        null,
+        app.subtitle
+    ),
+    React.createElement(
+        'p',
+        null,
+        app.options.length > 0 ? "Here are your options." : "No options."
+    ),
+    React.createElement(
+        'ol',
+        null,
+        React.createElement(
+            'li',
+            null,
+            'Item one'
+        ),
+        React.createElement(
+            'li',
+            null,
+            'Item two'
+        )
+    )
+);
 
-// this keyword - no longer bound.
+var count = 0;
 
-var user = {
-    name: 'Andrew',
-    cities: ['Philadelphia', 'New York', 'Dublin'],
-    printPlacesLived: function printPlacesLived() {
-        var _this = this;
-
-        return this.cities.map(function (city) {
-            return _this.name + ' has lived in ' + city;
-        });
-    }
+var addOne = function addOne() {
+    count++;
+    renderCounterApp();
+};
+var minusOne = function minusOne() {
+    // subtract -1 from count - rerender
+    count--;
+    renderCounterApp();
 };
 
-user.printPlacesLived();
-
-console.log(user.printPlacesLived());
-
-// Challenge Area
-
-var multipliyer = {
-    // numbers - array of numbers
-    // multiplyBy - single number
-    // multiply - return a new array where the numbers have been multiplied.
-    numbers: [1, 2, 3],
-    mutliplyBy: 3,
-    multiply: function multiply() {
-        var _this2 = this;
-
-        return this.numbers.map(function (number) {
-            return _this2.mutliplyBy * number;
-        });
-    }
+var reset = function reset() {
+    // set count to 0 a rerender
+    count = 0;
+    renderCounterApp();
 };
 
-console.log(multipliyer.multiply(1));
+// Challenge
+// Make a button "-1" - setup minusOne and register - log "minusOne"
+// Make reset button "reset" - setup reset function - log "reset"
+
+var appRoot = document.getElementById('app');
+
+var renderCounterApp = function renderCounterApp() {
+    var templateTwo = React.createElement(
+        'div',
+        null,
+        React.createElement(
+            'h1',
+            null,
+            'Count: ',
+            count
+        ),
+        React.createElement(
+            'button',
+            { onClick: addOne },
+            '+1'
+        ),
+        React.createElement(
+            'button',
+            { onClick: minusOne },
+            '-1'
+        ),
+        React.createElement(
+            'button',
+            { onClick: reset },
+            'reset'
+        )
+    );
+    ReactDOM.render(templateTwo, appRoot);
+};
+
+renderCounterApp();
