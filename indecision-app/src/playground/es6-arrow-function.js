@@ -1,5 +1,3 @@
-'use strict';
-
 // function square(x) {
 //   return x * x;
 // };
@@ -20,13 +18,12 @@
 // Create regular arrow function
 // Create a second arrow function using shorthand syntax
 
-var getFirstName = function getFirstName(fullName) {
+const getFirstName = (fullName) => {
     return fullName.split(' ')[0];
 };
 
-var getLastName = function getLastName(fullName) {
-    return fullName.split(' ')[1];
-};
+const getLastName = (fullName) => fullName.split(' ')[1];
 
-console.log(getFirstName('Jaden Smith'));
-console.log(getLastName('Jaden Smith'));
+console.log(getFirstName('Jaden Smith'))
+console.log(getLastName('Jaden Smith'))
+
