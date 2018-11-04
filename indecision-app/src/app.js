@@ -1,4 +1,16 @@
-class IndecisionApp extends React.Component {
+// const obj = {
+//     name: 'Vikram',
+//     getName() {
+//         return this.name;
+//     },
+// };
+//
+// const getName = obj.getName.bind(obj);
+//
+// console.log(getName())
+// Bookmarked
+
+ class IndecisionApp extends React.Component {
     render() {
         const title = 'Indecision';
         const subtitle = 'Put your life in the hands of a computer.';
@@ -50,7 +62,8 @@ class Action extends React.Component {
 
 class Options extends React.Component {
     handleRemoveAll() {
-        alert('handleRemoveAll')
+        console.log(this.props.options);
+        // alert('handleRemoveAll')
     }
     render() {
         return (
