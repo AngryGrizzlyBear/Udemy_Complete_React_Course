@@ -29,7 +29,8 @@ class Counter extends React.Component {
             return {
                 count: 0
             }
-        })
+        });
+
     }
     render () {
         return (
