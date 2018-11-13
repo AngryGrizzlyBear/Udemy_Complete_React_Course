@@ -44,9 +44,7 @@ var IndecisionApp = function (_React$Component) {
         key: 'handleDeleteOptions',
         value: function handleDeleteOptions() {
             this.setState(function () {
-                return {
-                    options: []
-                };
+                return { options: [] };
             });
         }
         // HandleDeleteOptions
@@ -70,9 +68,7 @@ var IndecisionApp = function (_React$Component) {
             }
 
             this.setState(function (prevState) {
-                return {
-                    options: prevState.options.concat(option)
-                };
+                return { options: prevState.options.concat(option) };
             });
         }
     }, {
@@ -247,7 +243,6 @@ var AddOption = function (_React$Component2) {
 
             var option = e.target.elements.option.value.trim();
             var error = this.props.handleAddOption(option);
-
             this.setState(function () {
                 return { error: error };
             });
