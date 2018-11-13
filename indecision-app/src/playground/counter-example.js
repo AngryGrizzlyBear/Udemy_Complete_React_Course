@@ -1,5 +1,9 @@
 // count - setup default prop value to 0
 
+// Grab the add function from the add.js file in the ulils folder
+// Grab React from react npm module
+// add(2, 4)
+
 class Counter extends React.Component {
     constructor(props) {
         super(props);
