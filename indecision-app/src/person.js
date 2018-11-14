@@ -1,8 +1,3 @@
-import { isAdult, canDrink } from "./person";
-
-console.log(isAdult(17));
-console.log(canDrink(21));
-
 // import './utils.js';
 // import { square, add } from './utils.js';
 // console.log('app.js is running!');
@@ -16,3 +11,9 @@ console.log(canDrink(21));
 
 // import isAdult and canDrink
 // use both printing result to the console.
+
+export const isAdult =  (age) => age >= 18;
+
+export const canDrink = (age) => age >= 21;
+
+

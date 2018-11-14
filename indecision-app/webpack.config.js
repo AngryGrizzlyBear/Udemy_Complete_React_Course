@@ -1,5 +1,5 @@
-const path = require('path')
-;
+const path = require('path');
+
 // use this for reference
 // console.log(path.join(__dirname, 'public');
 
