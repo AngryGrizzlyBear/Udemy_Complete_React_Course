@@ -1,6 +1,30 @@
-// install -> import -> use
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
+import IndecisionApp from './components/IndecisionApp';
 
-const template =<p>THIS IS JSX FROM WEBPACK</p>
-ReactDom.render(template, document.getElementById('app'))
+ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
+
+
+
+
+
+
+// notes
+// const obj = {
+//     name: 'Vikram',
+//     getName() {
+//         return this.name;
+//     },
+// };
+//
+// const getName = obj.getName.bind(obj);
+//
+// console.log(getName())
+// Bookmarked
+
+// Hoping to get to this today.
+// 11-8-2018 Sick. :/
+// Stateless functional component
+// Moving the component code
+// Setup import/export
+// Move the imports to that new files (and setup an import here.)
