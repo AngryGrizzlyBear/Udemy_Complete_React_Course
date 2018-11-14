@@ -1,9 +1,13 @@
 console.log('utils.js is running');
 
-export const square = (x) => x * x;
-export const add = (a, b) => a + b;
+const square = (x) => x * x;
+const add = (a, b) => a + b;
 
-// export {square, add}; works too.
+const subtract = (a, b) => a - b;
+
+export default
+
+//export {square, add, subtract as default };
 
 
 // export - default export - named exports
