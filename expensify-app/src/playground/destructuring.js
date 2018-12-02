@@ -45,3 +45,5 @@ const [ hot , , price] = item;
 // grab first and third items using array destructuring
 
 console.log(`A medium ${hot} costs ${price}`);
+
+// Will work on this later.
