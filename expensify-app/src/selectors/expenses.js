@@ -18,7 +18,7 @@ export default (expenses, { text, sortBy, startDate, endDate }) => {
         } else if (sortBy === 'amount') {
             return a.amount < b.amount ? 1 : -1;
         }
-        // sotrBy -> amount
+        // sortBy -> amount
         // put the one with a greater amount
     });
 };
