@@ -3,7 +3,7 @@ import uuid from "uuid";
 // ADD_EXPENSE
 export const addExpense = (
     {
-        description = ' ',
+        description = '',
         note = '',
         amount = 0,
         createdAt = 0
