@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 
-// Export a stateless functional component
+// Export a stateless functional components
 // description, amount, createdAt
 const ExpenseListItem = ({ id, description, amount ,createdAt }) => (
   <div>

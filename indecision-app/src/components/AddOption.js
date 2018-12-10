@@ -35,10 +35,10 @@ export default class AddOption extends React.Component {
     }
 }
 
-// Option -> Option component here.
+// Option -> Option components here.
 
 // Create an Options Class. Options -> Components here.
-// AddOption Component -> AddOption component here.
+// AddOption Component -> AddOption components here.
 
 // const User = (props) => {
 //     return (

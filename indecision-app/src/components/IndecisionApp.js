@@ -117,7 +117,7 @@ Header.defaultProps = {
 };
 
 
-// Setup options prop for Options component
+// Setup options prop for Options components
 // Render the length  of the array.
 
 // Render new p tag for each option (set text, set key.)

@@ -36,11 +36,11 @@
 // <Edit />
 // <Help />
 // <Switch>
-// <Route path="/" component={ExpenseDashboardPage} exact={true}/>
-// <Route path="/create" component={AddExpensePage} />
-// <Route path="/edit" component={EditExpensePage} />
-// <Route path="/help" component={HelpPage} />
-// <Route component={NotFoundPage}/>
+// <Route path="/" components={ExpenseDashboardPage} exact={true}/>
+// <Route path="/create" components={AddExpensePage} />
+// <Route path="/edit" components={EditExpensePage} />
+// <Route path="/help" components={HelpPage} />
+// <Route components={NotFoundPage}/>
 // </Switch>
 //
 // </div>

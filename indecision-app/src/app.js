@@ -76,7 +76,7 @@ ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
 
 // Hoping to get to this today.
 // 11-8-2018 Sick. :/
-// Stateless functional component
-// Moving the component code
+// Stateless functional components
+// Moving the components code
 // Setup import/export
 // Move the imports to that new files (and setup an import here.)

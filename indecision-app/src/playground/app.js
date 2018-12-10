@@ -12,7 +12,7 @@
 
 // Hoping to get to this today.
 // 11-8-2018 Sick. :/
-// Stateless functional component
+// Stateless functional components
  class IndecisionApp extends React.Component {
     constructor(props){
         super(props);
@@ -148,7 +148,7 @@ const Action = (props) => {
 //     }
 // }
 
-// Setup options prop for Options component
+// Setup options prop for Options components
 // Render the length  of the array.
 
 // Render new p tag for each option (set text, set key.)
@@ -250,10 +250,10 @@ class AddOption extends React.Component {
     }
 }
 
-// Option -> Option component here.
+// Option -> Option components here.
 
 // Create an Options Class. Options -> Components here.
-// AddOption Component -> AddOption component here.
+// AddOption Component -> AddOption components here.
 
 // const User = (props) => {
 //     return (
